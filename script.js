@@ -9,4 +9,9 @@ class productProperties {
         const total = price * quantity;
         return total;
     }
+
+    toString(name, price, quantity){
+        console.log(`Product: ${name}, Price: $ ${price}, Quantity: ${quantity}`);
+        
+    }
 }
