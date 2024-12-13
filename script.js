@@ -17,7 +17,10 @@ class productProperties {
 
 
 class perishableProductProperties extends productProperties {
-    
+    constructor(name, price, quantity, expirationDate) {
+        super(name, price, quantity);
+        this.expirationDate = expirationDate;
+    }
 }
 
 const product = new productProperties("milk", 9.99, 3);
