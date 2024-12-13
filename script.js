@@ -77,8 +77,14 @@ console.log(milk.toString());
 const water = new productProperties ("water",2,3,"never");
 console.log(water.toString());
 
-const products = [milk, water];
+const chicken = new perishableProductProperties("chicken", 10 , 3 , "12-2024");
+const nuggets = new perishableProductProperties("nuggets", 3, 10, "02-2025");
+const cheese = new perishableProductProperties("cheese", 6, 2, "01-2025");
 
-productProperties.applyDiscount(products, 0.05);
+const myStore = new store();
 
-products.forEach(product => console.log(product.toString()));
+myStore.addProduct(milk);
+myStore.addProduct(water);
+myStore.addProduct(chicken);
+myStore.addProduct(nuggets);
+myStore.addProduct(cheese);
