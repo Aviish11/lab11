@@ -37,7 +37,9 @@ class perishableProductProperties extends productProperties {
 class store {
     const inventory =[];
 
-    
+    addProduct(product) {
+        this.inventory.push(product);
+    }
 }
 
 
