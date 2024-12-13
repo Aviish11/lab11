@@ -32,6 +32,13 @@ class perishableProductProperties extends productProperties {
     }
 }
 
+
+
+class store {
+    
+}
+
+
 const milk = new productProperties("milk", 9.99, 3, "05 2025");
 console.log(milk.getTotalValue());
 console.log(milk.toString()); 
