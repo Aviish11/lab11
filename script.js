@@ -11,6 +11,6 @@ class productProperties {
     }
 
     toString(name, price, quantity){
-        console.log(`Product: ${name}, Price: $ ${price}, Quantity: ${quantity}`);
+        return `Product: ${this.name}, Price: $ ${this.price}, Quantity: ${this.quantity}`;
     }
 }
