@@ -15,6 +15,11 @@ class productProperties {
     }
 }
 
+
+class perishableProductProperties extends productProperties {
+    
+}
+
 const product = new productProperties("milk", 9.99, 3);
 console.log(product.getTotalValue());
 console.log(product.toString()); 
