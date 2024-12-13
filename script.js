@@ -27,6 +27,10 @@ class perishableProductProperties extends productProperties {
     }
 }
 
-const product = new perishableProductProperties("milk", 9.99, 3, "05 2025");
-console.log(product.getTotalValue());
-console.log(product.toString()); 
+const milk = new perishableProductProperties("milk", 9.99, 3, "05 2025");
+console.log(milk.getTotalValue());
+console.log(milk.toString()); 
+
+const apple = new perishableProductProperties("apple", 2.5, 50, "05 2025");
+console.log(apple.getTotalValue());
+console.log(apple.toString()); 
