@@ -69,13 +69,8 @@ findProductByName(name) {
 
 
 const milk = new productProperties("milk", 9.99, 3, "05 2025");
-console.log(milk.getTotalValue());
-console.log(milk.toString()); 
-
-
 
 const water = new productProperties ("water",2,3,"never");
-console.log(water.toString());
 
 const chicken = new perishableProductProperties("chicken", 10 , 3 , "12-2024");
 const nuggets = new perishableProductProperties("nuggets", 3, 10, "02-2025");
@@ -88,3 +83,19 @@ myStore.addProduct(water);
 myStore.addProduct(chicken);
 myStore.addProduct(nuggets);
 myStore.addProduct(cheese);
+
+console.log(`Total before discount: $ ${myStore.getInventoryValue()}`);
+
+productProperties.applyDiscount(myStore.inventory, 0.15);
+
+
+console.log(`Total after discount: $ ${myStore.getInventoryValue()}`);
+
+const searchProduct = "milk";
+
+const foundProduct = myStore.findProductByName(searchProduct);
+
+if (foundProduct) {
+    console.log(foundProduct.toString());
+} 
+
