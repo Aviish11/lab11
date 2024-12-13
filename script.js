@@ -21,6 +21,10 @@ class perishableProductProperties extends productProperties {
         super(name, price, quantity);
         this.expirationDate = expirationDate;
     }
+
+    toString() {
+        return `Product: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}, Expiration Date: ${this.expirationDate}`;
+    }
 }
 
 const product = new productProperties("milk", 9.99, 3);
