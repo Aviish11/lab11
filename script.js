@@ -40,6 +40,17 @@ class store {
     addProduct(product) {
         this.inventory.push(product);
     }
+
+
+    getInventoryValue(){
+        let totalValue = 0;
+
+    for (let i = 0; i < this.inventory.length; i++) {
+        const product = this.inventory[i]; 
+        totalValue += product.getTotalValue(); 
+    }
+    return totalValue;
+}
 }
 
 
