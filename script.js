@@ -35,6 +35,8 @@ class perishableProductProperties extends productProperties {
 
 
 class store {
+    const inventory =[];
+
     
 }
 
