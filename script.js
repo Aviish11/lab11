@@ -14,3 +14,7 @@ class productProperties {
         return `Product: ${this.name}, Price: $ ${this.price}, Quantity: ${this.quantity}`;
     }
 }
+
+const product = new productProperties("milk", 9.99, 3);
+console.log(product.getTotalValue());
+console.log(product.toString()); 
