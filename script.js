@@ -19,7 +19,7 @@ class productProperties {
             product.price -= product.price * discount;
         });
 }
-
+}
 
 class perishableProductProperties extends productProperties {
     constructor(name, price, quantity, expirationDate) {
@@ -32,10 +32,17 @@ class perishableProductProperties extends productProperties {
     }
 }
 
-const milk = new perishableProductProperties("milk", 9.99, 3, "05 2025");
+const milk = new productProperties("milk", 9.99, 3, "05 2025");
 console.log(milk.getTotalValue());
 console.log(milk.toString()); 
 
-const apple = new perishableProductProperties("apple", 2.5, 50, "05 2025");
-console.log(apple.getTotalValue());
-console.log(apple.toString()); 
+
+
+const water = new productProperties ("water",2,3,"never");
+console.log(water.toString());
+
+const products = [milk, water];
+
+productProperties.applyDiscount(products, 0.05);
+
+products.forEach(product => console.log(product.toString()));
