@@ -35,7 +35,7 @@ class perishableProductProperties extends productProperties {
 
 
 class store {
-    const inventory =[];
+     const inventory =[];
 
     addProduct(product) {
         this.inventory.push(product);
@@ -50,6 +50,18 @@ class store {
         totalValue += product.getTotalValue(); 
     }
     return totalValue;
+}
+
+findProductByName(name) {
+    for (let i = 0; i < this.inventory.length; i++) {
+        const product = this.inventory[i]; 
+
+        if (product.name === name) {
+            return product; 
+        }
+    }
+
+    return 0; 
 }
 }
 
