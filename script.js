@@ -4,4 +4,9 @@ class productProperties {
         this.price = price;
         this.quantity = quantity;
     }
+
+    getTotalValue(price,quantity){
+        const total = price * quantity;
+        return total;
+    }
 }
